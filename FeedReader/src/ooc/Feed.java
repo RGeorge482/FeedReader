@@ -32,4 +32,23 @@ public class Feed implements FeedInterface {
         items.add(item);
     }
     
+        /**
+     * This method returns the FeedItem with the given title, or null if no item
+     * has the given title. You can assume that no two items will have the same
+     * title
+     *
+     * @param title the title of the item to find.
+     * @return the FeedItem with the given title or null if no item has the
+     * given title.
+     */
+    @Override
+    public FeedItem getItem(String title){
+        for(FeedItem item : items) {
+            if(item.getTitle().equalsIgnoreCase(title)) {
+                return item; // item.getContent();
+            }
+        }
+        return null;
+    }
+    
 }
