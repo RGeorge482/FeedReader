@@ -32,4 +32,22 @@ public class Feed implements FeedInterface {
         items.add(item);
     }
     
+      /**
+     * This method returns a collection of the titles of all the items in the
+     * feed.
+     *
+     * @return a list of titles of all the items in the feed.
+     */
+    @Override
+    public Collection<String> listTitles(){
+        ArrayList<String> titles = new ArrayList<>();
+
+        for(FeedItem item : items) {
+            titles.add(item.getTitle());
+        }
+        return titles;
+    }
+    
+    
+    
 }
