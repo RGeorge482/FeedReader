@@ -22,4 +22,14 @@ public class Feed implements FeedInterface {
         items = new ArrayList<>();
     }
     
+     /**
+     * This method add a new FeedItem into the Feed
+     *
+     * @param item -New Feed item
+     */
+    @Override
+    public void addItem(FeedItem item){
+        items.add(item);
+    }
+    
 }
