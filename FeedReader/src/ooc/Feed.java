@@ -32,13 +32,13 @@ public class Feed implements FeedInterface {
         items.add(item);
     }
     
-<<<<<<< HEAD
-      /**
-     * This method returns a collection of the titles of all the items in the
-     * feed.
-     *
-     * @return a list of titles of all the items in the feed.
-     */
+
+    /**
+   * This method returns a collection of the titles of all the items in the
+   * feed.
+   *
+   * @return a list of titles of all the items in the feed.
+   */
     @Override
     public Collection<String> listTitles(){
         ArrayList<String> titles = new ArrayList<>();
@@ -50,8 +50,6 @@ public class Feed implements FeedInterface {
     }
     
     
-    
-=======
         /**
      * This method returns the FeedItem with the given title, or null if no item
      * has the given title. You can assume that no two items will have the same
@@ -71,5 +69,34 @@ public class Feed implements FeedInterface {
         return null;
     }
     
->>>>>>> Third-branch
+     /**
+     * This method returns the number of items in the feed.
+     *
+     * @return the number of items in this feed.
+     */
+    @Override
+    public int numItems(){
+        return items.size();
+    }
+    
+     /**
+     * This method returns a collection of all the items that have the given
+     * keyword in either the title or the content of the item. If no matching
+     * item is found, the method should return an empty collection.
+     *
+     * @param keyword the keyword to search for.
+     * @return a collection of all the items that have the given keyword in the
+     * title or the content.
+     */
+    @Override
+    public Collection<FeedItem> findItems(String keyword){
+        ArrayList<FeedItem> foundItem = new ArrayList<>();
+        for(FeedItem item: items) {
+            if (item.getContent().toLowerCase().contains(keyword)|| item.getTitle().toLowerCase().contains(keyword) ) {
+                foundItem.add(item);
+            }
+        }
+        return foundItem;
+    }
+
 }
