@@ -32,7 +32,7 @@ public class Feed implements FeedInterface {
         items.add(item);
     }
     
-<<<<<<< HEAD
+
       /**
      * This method returns a collection of the titles of all the items in the
      * feed.
@@ -51,7 +51,7 @@ public class Feed implements FeedInterface {
     
     
     
-=======
+
         /**
      * This method returns the FeedItem with the given title, or null if no item
      * has the given title. You can assume that no two items will have the same
@@ -71,5 +71,5 @@ public class Feed implements FeedInterface {
         return null;
     }
     
->>>>>>> Third-branch
+
 }
