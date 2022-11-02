@@ -24,20 +24,20 @@ public class FeedReader {
         
         feed.addItem(new FeedItem("THE END OF THE WORLD", "It hasn't happened yet"));
         
-        System.out.println("=== News titles ===");
+       // System.out.println("=== News titles ===");
         for (String title : feed.listTitles()) {
-            System.out.println(title);
+            //System.out.println(title);
         }       
         
-        System.out.println("=== Item with title NEW PANDEMIC ===");
-        System.out.println(feed.getItem("NEW PANDEMIC"));
+        //System.out.println("=== Item with title NEW PANDEMIC ===");
+       // System.out.println(feed.getItem("NEW PANDEMIC"));
         
-        System.out.println("=== Number of items ===");
-        System.out.println(feed.numItems());        
+        //System.out.println("=== Number of items ===");
+       // System.out.println(feed.numItems());        
         
-        System.out.println("=== News with the word covid in them ===");
+        //System.out.println("=== News with the word covid in them ===");
         for (FeedItem item : feed.findItems("covid")) {
-            System.out.println(item);
+           // System.out.println(item);
         }
 
     }
