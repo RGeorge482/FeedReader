@@ -5,10 +5,21 @@
  */
 package ooc;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+
+
 /**
  *
  * @author 35386
  */
-public class Feed {
+public class Feed implements FeedInterface {
+   ArrayList<FeedItem>items;
+
+    public Feed() {
+        items = new ArrayList<>();
+    }
     
 }
